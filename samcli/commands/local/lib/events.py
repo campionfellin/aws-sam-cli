@@ -234,7 +234,7 @@ def generate_kinesis_event(region, partition, sequence, data):
             "kinesis": {
                 "approximateArrivalTimestamp": 1428537600,
                 "partitionKey": partition,
-                "data": data,
+                "data": data.decode('utf-8'),
                 "kinesisSchemaVersion": "1.0",
                 "sequenceNumber": sequence
             },
